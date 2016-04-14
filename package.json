@@ -1,0 +1,39 @@
+{
+  "name": "gulp-ref",
+  "version": "1.0.0",
+  "description": "find references, concat, replace, min, hash them!!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "cat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhso/gulp-ref.git"
+  },
+  "keywords": [
+    "gulp",
+    "ref",
+    "hash",
+    "replace",
+    "min"
+  ],
+  "author": "s@zhso.net",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhso/gulp-ref/issues"
+  },
+  "homepage": "https://github.com/zhso/gulp-ref#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.7.0",
+    "gulp": "^3.9.1",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
+  }
+}
