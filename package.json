@@ -33,7 +33,9 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
+    "event-stream": "^3.3.2",
     "gulp-util": "^3.0.7",
-    "through2": "^2.0.1"
+    "through2": "^2.0.1",
+    "vinyl-fs": "^2.4.3"
   }
 }
