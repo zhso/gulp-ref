@@ -3,8 +3,6 @@ const fs = require("fs");
 const path = require("path");
 const obj = require("through2").obj;
 const util = require("gulp-util");
-const es = require("event-stream");
-const vinyl = require("vinyl-fs");
 const PLUGIN_NAME = "gulp-ref";
 module.exports = ()=> obj((file, enc, cb)=> {
     if (!file) {
@@ -12,24 +10,25 @@ module.exports = ()=> obj((file, enc, cb)=> {
     }
     if (file.isBuffer()) {
         const content = file.contents.toString();
-        let regexps = [
+        const regexps = [
             /<script[^>]+src="(^(?!http:\/\/)[^"]+)"/g,
             /<img[^>]+src="((?!http:\/\/)[^"]+)"/g,
             /url\(((?!http:\/\/)[^\)]+)\)/g,
             /<link[^>]+href="((?!http:\/\/)[^"]+)"/g
         ];
-        let sources = new Set();
-        let source;
+        const sources = new Set();
         while (regexps.length > 0) {
-            let regexp = regexps.pop();
-            while (source = regexp.exec(content)) {
+            const regexp = regexps.pop();
+            let source = regexp.exec(content);
+            while (source) {
                 sources.add(source[1]);
+                source = regexp.exec(content);
             }
         }
-        let files = [];
-        let keys = [...sources];
+        const files = [];
+        const keys = [...sources];
         keys.forEach(assetName=> {
-            let assetPath = path.join(file.base, assetName);
+            const assetPath = path.join(file.base, assetName);
             /*fs.stat(assetPath, (err, stat)=> {
              if (err) {
              //throw new util.pluginError(PLUGIN_NAME, 'File not found.');
@@ -43,12 +42,16 @@ module.exports = ()=> obj((file, enc, cb)=> {
              });
              }
              });*/
-            var stat = fs.statSync(assetPath);
-            if (stat && stat.isFile()) {
-                files.push(assetPath);
+            try {
+                const stat = fs.statSync(assetPath);
+                if (stat && stat.isFile()) {
+                    files.push(assetPath);
+                }
+            } catch (err) {
+                //console.log(err.path);
             }
         });
-        return es.duplex(obj(), es.merge(vinyl.src.apply(vinyl.src, files), obj()));
+        console.log(files);
     }
-    //cb(null, file);
+    cb(null, file);
 });
