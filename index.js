@@ -11,25 +11,25 @@ module.exports = ()=> obj(function (file, enc, cb) {
     if (file.isBuffer()) {
         const content = file.contents.toString();
         const regexps = [
-            /<script[^>]+src="([^"]+)"[^>]+><\/script>/g,
-            /<img[^>]+src="((?!http:\/\/)[^"]+)">/g,
+            /<script[^>]+src="((?!http:\/\/)[^"]+)"[^>]*><\/script>/g,
+            /<img[^>]+src="((?!http:\/\/)[^"]*)">/g,
             /url\(((?!http:\/\/)[^\)]+)\)/g,
-            /<link[^>]+href="((?!http:\/\/)[^"]+)">/g
+            /<link[^>]+href="((?!http:\/\/)[^"]+)"[^>]*>/g
         ];
         const sources = new Set();
+        const regexp = /gulp/;
         while (regexps.length > 0) {
-            let regexp = regexps.pop();
+            regexp.compile(regexps.pop());
             let source = regexp.exec(content);
             while (source) {
                 sources.add(source[1]);
-                console.log(source[1]);
                 source = regexp.exec(content);
             }
         }
         const keys = [...sources];
-        //console.log(keys);
+        console.log(keys);
         keys.forEach(assetName=> {
-            const assetPath = path.join(file.base, assetName);
+            const assetPath = path.join(path.dirname(path.join(file.base, file.relative)), assetName);
             try {
                 const stat = fs.statSync(assetPath);
                 if (stat && stat.isFile()) {
@@ -42,7 +42,7 @@ module.exports = ()=> obj(function (file, enc, cb) {
                     this.push(newFile);
                 }
             } catch (err) {
-                console.log("#" + assetPath);
+                //console.log(`#${assetPath}`);
                 //console.log(err.path);
             }
         });
