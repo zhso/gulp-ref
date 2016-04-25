@@ -31,9 +31,7 @@
     "eslint": "^2.7.0",
     "gulp": "^3.9.1",
     "gulp-usemin": "^0.3.22",
-    "gulp-util": "^3.0.7",
-    "mocha": "^2.4.5",
-    "through2": "^2.0.1"
+    "mocha": "^2.4.5"
   },
   "dependencies": {
     "gulp-util": "^3.0.7",

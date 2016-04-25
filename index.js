@@ -16,6 +16,7 @@ module.exports = ()=> obj(function (file, enc, cb) {
             /url\(((?!http:\/\/)[^\)]+)\)/g,
             /<link[^>]+href="((?!http:\/\/)[^"]+)"[^>]*>/g
         ];
+        //TODO: Support http block build
         const sources = new Set();
         const regexp = /gulp/;
         while (regexps.length > 0) {
@@ -27,9 +28,17 @@ module.exports = ()=> obj(function (file, enc, cb) {
             }
         }
         const keys = [...sources];
-        console.log(keys);
+        //console.log(keys);
         keys.forEach(assetName=> {
+            console.log(">>>>>>>>>>>>>>>>>>");
+            console.log(file.base);
+            console.log(file.relative);
+            console.log(assetName);
+            console.log(file.path);
+            console.log(file.cwd);
+            console.log("<<<<<<<<<<<<<<<");
             const assetPath = path.join(path.dirname(path.join(file.base, file.relative)), assetName);
+            //console.log(assetPath);
             try {
                 const stat = fs.statSync(assetPath);
                 if (stat && stat.isFile()) {
@@ -40,6 +49,7 @@ module.exports = ()=> obj(function (file, enc, cb) {
                     });
                     newFile.base = file.base;
                     this.push(newFile);
+
                 }
             } catch (err) {
                 //console.log(`#${assetPath}`);
