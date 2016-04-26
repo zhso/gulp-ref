@@ -1,7 +1,7 @@
 {
   "name": "gulp-ref",
-  "version": "1.0.0",
-  "description": "find references, concat, replace, min, hash them!!",
+  "version": "0.0.1",
+  "description": "Find reference asserts, join stream pipe to next.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -26,15 +26,6 @@
     "url": "https://github.com/zhso/gulp-ref/issues"
   },
   "homepage": "https://github.com/zhso/gulp-ref#readme",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "del": "^2.2.0",
-    "eslint": "^2.7.0",
-    "gulp": "^3.9.1",
-    "gulp-usemin": "^0.3.22",
-    "gulp-useref": "^3.0.8",
-    "mocha": "^2.4.5"
-  },
   "dependencies": {
     "gulp-util": "^3.0.7",
     "through2": "^2.0.1"

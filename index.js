@@ -4,8 +4,6 @@ const path = require("path");
 const obj = require("through2").obj;
 const util = require("gulp-util");
 const PLUGIN_NAME = "gulp-ref";
-//TODO: Stream repetition exclusion
-//TODO: recurse Stream
 module.exports = ()=> obj(function (file, enc, cb) {
     if (!file) {
         throw new util.pluginError(PLUGIN_NAME, 'Missing file or files.');
