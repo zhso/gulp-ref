@@ -4,6 +4,8 @@ const path = require("path");
 const obj = require("through2").obj;
 const util = require("gulp-util");
 const PLUGIN_NAME = "gulp-ref";
+//TODO: Stream repetition exclusion
+//TODO: recurse Stream
 module.exports = ()=> obj(function (file, enc, cb) {
     if (!file) {
         throw new util.pluginError(PLUGIN_NAME, 'Missing file or files.');
@@ -12,11 +14,10 @@ module.exports = ()=> obj(function (file, enc, cb) {
         const content = file.contents.toString();
         const regexps = [
             /<script[^>]+src="((?!http:\/\/)[^"]+)"[^>]*><\/script>/g,
-            /<img[^>]+src="((?!http:\/\/)[^"]*)">/g,
+            /<img[^>]+src="((?!http:\/\/)[^"]*)"[^>]*>/g,
             /url\(((?!http:\/\/)[^\)]+)\)/g,
             /<link[^>]+href="((?!http:\/\/)[^"]+)"[^>]*>/g
         ];
-        //TODO: Support http block build
         const sources = new Set();
         const regexp = /gulp/;
         while (regexps.length > 0) {
@@ -28,17 +29,8 @@ module.exports = ()=> obj(function (file, enc, cb) {
             }
         }
         const keys = [...sources];
-        //console.log(keys);
         keys.forEach(assetName=> {
-            console.log(">>>>>>>>>>>>>>>>>>");
-            console.log(file.base);
-            console.log(file.relative);
-            console.log(assetName);
-            console.log(file.path);
-            console.log(file.cwd);
-            console.log("<<<<<<<<<<<<<<<");
             const assetPath = path.join(path.dirname(path.join(file.base, file.relative)), assetName);
-            //console.log(assetPath);
             try {
                 const stat = fs.statSync(assetPath);
                 if (stat && stat.isFile()) {
@@ -52,8 +44,7 @@ module.exports = ()=> obj(function (file, enc, cb) {
 
                 }
             } catch (err) {
-                //console.log(`#${assetPath}`);
-                //console.log(err.path);
+                //console.log(err.message);
             }
         });
     }

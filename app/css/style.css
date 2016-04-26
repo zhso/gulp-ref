@@ -1,0 +1,585 @@
+/*.theDate2 { float: left; width: 283px; height: 25px; padding-left: 8px; line-height: 25px; background: #F8F8F8; margin: 8px 0 0 13px; display: inline; }100402*/
+body {
+    border: 0px;
+}
+
+.nav .navList a.Ared, .nav .navList a.Ared:hover {
+    color: #8F1D21;
+}
+
+/*100726d*/
+.nav .navList a.Ared2, .nav .navList a.Ared2:hover {
+    color: #8F1D21;
+    text-decoration: none;
+}
+
+/*100726d*/
+.nav .navList a.Ared3, .nav .navList a.Ared3:hover {
+    color: #ba2636;
+}
+
+/*100726d*/
+.nav {
+    width: 1000px;
+    margin: 0 auto 8px auto;
+    padding: 8px 0 5px 0;
+    border-bottom: 10px #2b2b2b solid;
+    background: #fff;
+}
+
+/*100402*/
+/*.spaceA { width: 1000px; height: 1px; margin: 0px; padding: 0px; font-size: 1px; line-height: 0px; float: left; } 100402*/
+.nav .navM {
+    width: 100%;
+    margin: 0px;
+    float: left;
+}
+
+.nav .navL {
+    width: 100%;
+    margin: 0px;
+    float: left;
+    height: 54px;
+    overflow: inherit !important;
+    *overflow: inherit !important;
+    overflow: hidden;
+}
+
+/*100426*/
+.nav .Lines {
+    border-top: 1px #e7e7e7 solid;
+}
+
+.nav .Lines01 {
+    border-top: 1px #e7e7e7 solid;
+    border-bottom: 1px #e7e7e7 solid;
+    height: 27px;
+}
+
+.nav .bo {
+    width: 100%;
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+    background: #2b2b2b;
+    font-size: 1px;
+    line-height: 0px;
+    float: left;
+}
+
+/*.nav .bo .space { width: 1004px; height: 10px; float: left; } 100402*/
+.navCalendar, .navList, .nextNav {
+    float: left;
+    margin-left: 9px;
+    _margin-left: 4px;
+    display: inline;
+}
+
+/*100426*/
+.Cooperation, .navFind, .navFocus, .navProposal {
+    float: right;
+    margin-right: 9px;
+    _margin-right: 4px;
+}
+
+/*100402*/
+.nav .navCalendar {
+    width: 400px;
+    padding: 4px 0 0 5px;
+}
+
+.nav .Cooperation {
+    padding: 4px 0 0;
+    text-align: right;
+    width: 400px;
+}
+
+.nav .Cooperation a:hover, .nav .Cooperation a:visited {
+    color: #2B2B2B;
+}
+
+.nav .navLogo {
+    float: left;
+    padding: 0px;
+    display: inline;
+    width: 220px;
+}
+
+/*100908*/
+/*.nav .navLogo { float: left; width: 196px; overflow: hidden; padding:0px; display: inline;} 100426*/
+.nav .navLogo1 {
+    float: left;
+    display: block;
+    border: 0px;
+}
+
+/*100331*/
+.nav .navLogo2 {
+    float: left;
+    display: block;
+    border: 0px;
+    margin-top: 6px;
+}
+
+/*100426*/
+
+.nav .webSj {
+    width: 74px;
+    background: url(../images/websj.gif) no-repeat 0 33px;
+    overflow: hidden;
+    padding: 30px 0 0 12px;
+    line-height: 18px;
+    float: left;
+}
+
+/*100426*/
+.nav .webZm {
+    width: 74px;
+    background: url(../images/icon_sb.gif) no-repeat 0 33px;
+    overflow: hidden;
+    padding: 30px 0 0 13px;
+    line-height: 18px;
+    float: left;
+}
+
+/*100426*/
+
+.nav .navFind {
+    width: 348px;
+    padding: 23px 0 4px;
+}
+
+/*100426*/
+.nav .navFind span {
+    float: left;
+}
+
+.nav .navFind .text {
+    width: 182px;
+    height: 16px;
+    padding: 2px 0 0 5px;
+    margin-top: 1px !important;
+    *margin-top: 0px !important;
+    margin-top: 0;
+    margin-right: 7px;
+    _margin-right: 3px;
+    background: #fff;
+    border: 1px solid #819bb4;
+    color: #646464;
+    font-size: 12px;
+}
+
+/*100402*/
+.nav .navFind .sel {
+    width: 80px;
+    height: 16px;
+    margin: 1px 9px 0 0;
+    _margin-right: 4px;
+    padding: 2px 0 0 11px;
+    border: 1px solid #819bb4;
+    border-right: none;
+    background: #fff url(../images/nav0416_04.gif) no-repeat right center;
+    font-size: 12px;
+    color: #646464;
+    cursor: pointer;
+}
+
+/*100402*/
+.nav .navFind .button {
+    width: 51px;
+    height: 20px;
+    padding: 1px 0 0 2px;
+    margin: 1px 0 0;
+    border: none;
+    background: url(../images/navFind.gif) no-repeat 0 0;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#searchFormOption {
+    position: relative;
+    float: left;
+    z-index: 80;
+}
+
+#loginFldselectop {
+    position: absolute;
+    border: 1px solid #DFDFDF;
+    top: 20px;
+    left: 0px;
+    width: 73px;
+    background: #fff;
+    z-index: 99;
+}
+
+#loginFldselectop li {
+    line-height: 20px;
+    height: 20px;
+}
+
+#loginFldselectop li a {
+    line-height: 20px;
+    height: 20px;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 11px;
+}
+
+.nav .navList {
+    width: 772px;
+}
+
+/*100324*/
+.nav .navList li {
+    border-left: 1px #e7e7e7 solid;
+    padding: 5px 4px 0;
+    height: 22px;
+    float: left;
+    line-height: 18px;
+}
+
+.nav .navList .end {
+    border-left: 1px #e7e7e7 solid;
+    border-right: 1px #e7e7e7 solid;
+}
+
+#navCurrent {
+    border-right: 1px #fff solid;
+    border-left: none;
+    background: #2b2b2b url(../images/nav0416_07.gif) no-repeat left;
+    color: #fff;
+    padding: 4px 5px 0 7px;
+    height: 23px;
+    float: left;
+}
+
+#navCurrent a {
+    color: #fff;
+}
+
+.nav .navList a:hover, .nav .navList a:visited {
+    color: #2B2B2B;
+}
+
+.nav .navFocus {
+    float: right;
+    padding: 5px 0 0 5px;
+    color: #ba2636;
+    line-height: 18px
+}
+
+.nav .navFocus a {
+    line-height: 18px;
+}
+
+.nav .navV a, .nav .navTmp a, .nav .navVIP a, .nav .ifengPlay a, .nav .tvPlay a, .nav .navWap a {
+    color: #ba2636;
+}
+
+.nav .navV {
+    width: 37px;
+    background: url(../images/nav0416_14.gif) no-repeat 1px 4px;
+    padding: 0 0 0 17px;
+    float: left;
+}
+
+.nav .navTmp {
+    width: 37px;
+    float: left;
+}
+
+/*100324*/
+/*.nav .navVIP { width: 42px; background: url(../images/nav0416_09.gif) no-repeat 24px 3px; float: left; }*/
+.nav .ifengPlay {
+    width: 37px;
+    float: left;
+}
+
+/*100324*/
+.nav .tvPlay {
+    width: 50px;
+    background: url(../images/tvlogo.gif) no-repeat 0px 0px;
+    padding: 0 0 0 15px;
+    float: left;
+}
+
+/*100409*/
+.nav .navWap {
+    width: 30px;
+    background: url(../images/nav0416_06.gif) no-repeat 0px 2px;
+    padding: 0 0 0 11px;
+    float: left;
+}
+
+.nav .moreWap {
+    width: 14px;
+    margin: 1px 0 0;
+    float: left;
+    position: relative;
+}
+
+.nav .moreWap .next {
+    width: 160px;
+    height: 48px;
+    border: 1px #e7e7e7 solid;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: -146px;
+    z-index: 90;
+}
+
+.nav .navV a:hover, .nav .navV a:visited {
+    color: #BA2636;
+}
+
+.nav .navVIP a:hover, .nav .navVIP a:visited {
+    color: #BA2636;
+}
+
+.nav .ifengPlay a:hover, .nav .ifengPlay a:visited {
+    color: #BA2636;
+}
+
+.nav .tvPlay a:hover, .nav .tvPlay a:visited {
+    color: #BA2636;
+}
+
+.nav .navWap a:hover, .nav .navWap a:visited {
+    color: #BA2636;
+}
+
+.nav .navWa a:hover, .nav .navWa a:visited {
+    color: #BA2636;
+}
+
+.nav .moreWap a:hover, .nav .moreWap a:visited {
+    color: #004276;
+}
+
+.nav .nextNav {
+    padding: 8px 0 0 3px;
+    line-height: 18px;
+}
+
+/*100331*/
+.nav .nextNav a {
+    line-height: 18px;
+    padding: 0 7px;
+    float: left;
+    background: url(../images/shux.gif) right center no-repeat;
+    word-break: keep-all;
+}
+
+/*100320*/
+.nav .navProposal {
+    width: 100px;
+    text-align: right;
+    padding: 8px 0 0;
+}
+
+.navB {
+    width: 1000px;
+    height: 57px;
+    margin: 0 auto;
+}
+
+.navBLines {
+    border-top: 1px #f2f2f2 solid;
+}
+
+.navBLines01 {
+    border-top: 1px #f2f2f2 solid;
+    border-bottom: 1px #f2f2f2 solid;
+}
+
+.navB .navBLeft {
+    width: 123px;
+    height: 49px;
+    padding: 8px 0 0 14px;
+    border-right: 1px #f2f2f2 solid;
+    float: left;
+}
+
+.navB .navBRight {
+    width: 862px;
+    float: left;
+}
+
+.navB .navBRight .navBRtop {
+    width: 862px;
+    float: left;
+}
+
+.navB .navBRight .navBRtop .navBRTLeft {
+    width: 635px;
+    float: left;
+}
+
+.navB .navBRight .navBRtop .navBRTRight {
+    width: 209px;
+    padding: 6px 18px 0 0;
+    float: right;
+}
+
+.navB .navBRTLeft ul {
+}
+
+.navB .navBRTLeft li {
+    border-left: 1px #f2f2f2 solid;
+    padding: 5px 6px 0 7px;
+    height: 22px;
+    float: left;
+    line-height: 18px;
+}
+
+.navB .navBRTLeft .end {
+    border-left: 1px #f2f2f2 solid;
+    border-right: 1px #f2f2f2 solid;
+}
+
+.navB .navBRTLeft ul .current {
+    border-right: 1px #fff solid;
+    border-left: none;
+    background: #2b2b2b url(../images/nav0416_07.gif) no-repeat left;
+    color: #fff;
+    padding: 4px 5px 0 8px;
+    height: 23px;
+    float: left;
+}
+
+.navB .navBRTLeft ul .current a {
+    color: #fff;
+}
+
+.navB .navBRight .navBRtop .navBRTRight {
+    text-align: right;
+}
+
+.navB .navBRTRight a {
+    padding: 0 0 0 8px;
+}
+
+.navB .navBRight .navBRbot {
+    width: 862px;
+    float: left;
+    padding: 6px 0 0 0;
+    line-height: 18px;
+}
+
+.navB .navBRbot a {
+    line-height: 18px;
+    padding: 0 7px 0 8px;
+}
+
+a {
+    color: #2b2b2b;
+}
+
+.black {
+    color: #000;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    margin: 0 auto;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+.LightGrey01, .LightGrey01 a {
+    color: #2b2b2b;
+}
+
+.LightGrey02, .LightGrey02 a {
+    color: #666;
+}
+
+.LightGrey03, .LightGrey03 a {
+    color: #999;
+}
+
+.LightGrey04, .LightGrey04 a {
+    color: #d9d9d9;
+}
+
+.LightGrey05, .LightGrey05 a {
+    color: #e7e7e7;
+}
+
+.white, .white a {
+    color: #fff;
+}
+
+.LightWhite, .LightWhite a {
+    color: #f3f3f3;
+}
+
+.red, .red a, .red a:hover, .red a:visited {
+    color: #ba2636;
+}
+
+.LightBlue01, .LightBlue01 a, .LightBlue01 a:hover {
+    color: #004276;
+}
+
+.LightBlue02, .LightBlue02 a {
+    color: #007bbb;
+}
+
+.fz11 {
+    font: 11px Arial;
+    color: #666;
+}
+
+.fz12 {
+    font-size: 12px;
+}
+
+.fz14 {
+    font-size: 14px;
+}
+
+.fz16 {
+    font-size: 16px;
+}
+
+.fz18 {
+    font-size: 18px;
+    font-family: simhei;
+}
+
+.fz20 {
+    font-size: 20px;
+    font-family: simhei;
+}
+
+.line18, .line18 a {
+    line-height: 18px;
+}
+
+.line20, .line20 a {
+    line-height: 20px;
+}
+
+.line22, .line22 a {
+    line-height: 22px;
+}
+
+.line24, .line24 a {
+    line-height: 18px;
+}
+
+.bol {
+    font-weight: bold;
+}
+
+.bolNo {
+    font-weight: normal;
+}
+
+.lineul18 li, .lineul18 li a {
+    line-height: 18px;
+}

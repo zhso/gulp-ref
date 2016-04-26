@@ -28,9 +28,11 @@
   "homepage": "https://github.com/zhso/gulp-ref#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "del": "^2.2.0",
     "eslint": "^2.7.0",
     "gulp": "^3.9.1",
     "gulp-usemin": "^0.3.22",
+    "gulp-useref": "^3.0.8",
     "mocha": "^2.4.5"
   },
   "dependencies": {

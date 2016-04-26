@@ -1,0 +1,227 @@
+<!--页头代码开始-->
+<!--test2-->
+<!-- build:js js/mix.js -->
+<script src="js/inice.min.js"></script>
+<script src="js/festival.2010.js"></script>
+<!-- endbuild -->
+<!-- build:inlinecss -->
+<link rel="stylesheet" href="css/style.css">
+<!-- endbuild -->
+<div class="nav" style="overflow: visible">
+    <div class="navM Lines"><!--100426-->
+        <div class="navCalendar line18">
+            <!--100528 begin-->
+            <span><script>FestivalDay.show();</script>&nbsp;</span><span id="nav_weather"></span>
+            <script src="js/nav_weather.js" language="javascript" defer></script>
+            <!--100528 end-->
+        </div>
+        <div class="Cooperation LightGrey01">
+            <a href="http://gongyi.ifeng.com/" target="_blank">公益</a>&nbsp;|&nbsp;<a href="http://culture.ifeng.com/"
+                                                                                     target="_blank">文化</a>&nbsp;|&nbsp;<a
+                href="http://fo.ifeng.com/" target="_blank">佛教</a>&nbsp;|&nbsp;<a href="http://media.ifeng.com/"
+                                                                                  target="_blank">传媒</a>&nbsp;|&nbsp;<a
+                href="http://mag.book.ifeng.com/" target="_blank">杂志</a>&nbsp;|&nbsp;<a href="http://play.ifeng.com/"
+                                                                                        target="_blank">爱玩</a>&nbsp;|&nbsp;<a
+                href="http://zhongyi.ifeng.com/" target="_blank">中医</a>
+        </div>
+    </div>
+    <div class="navL"><!--100426-->
+        <div class="navLogo">
+            <a href="http://www.ifeng.com/" target="_blank"><img
+                    src="images/logo_chanel_ifeng.gif" class="navLogo1"/></a>
+            <a href="http://news.ifeng.com/" target="_blank"><img
+                    src="images/logo_chanel_zixun.gif" class="navLogo2"/></a>
+            <div class="clear"></div>
+        </div>
+        <div class="webSj red"><a href="http://3g.ifeng.com/3g/news.html" target="_blank">手机凤凰网</a></div>
+        <div class="webZm red"><a href="http://app.finance.ifeng.com/shortcut.php?site=news.ifeng.com/" target="_blank">加入桌面</a>
+        </div>
+
+
+        <!-- search begin -->
+        <script src="http://m0.ifengimg.com/keywords.js"></script>
+        <div class="navFind" style="position: relative;z-index:80;">
+            <form id="search_form" method="get" action="http://search.ifeng.com/sofeng/search.action" target="_blank"
+                  onsubmit="return Tourl();">
+    <span>
+	    <input id="keyword" type="text" name="q" value="" class="text" autocomplete="off"
+               onclick="header_search.clean_default(this.value)" onblur="header_search.set_default(this.value)"/>
+		<input id="param1" type="hidden" name="c" value="1"/>
+		<input id="param2" type="hidden" name="" value="" disabled="disabled"/>
+    </span>
+                <div id="searchFormOption">
+                    <span id="loginUl" onclick="header_search.show_option()" style="cursor: default;"
+                          class="sel">站内</span>
+                    <ul id="loginFldselectop" style="display: none;" onmouseout="header_search.out_option()"
+                        onmouseover="header_search.over_option()">
+                        <li id="ra1" style="cursor: default;" onmouseover="this.style.background='#e7e7e7'"
+                            onmouseout="this.style.background='white'"><a onclick="header_search.select_option('站内')"
+                                                                          style="width: 100%; display: block; height: 17px;">站内</a>
+                        </li>
+                        <li id="ra2" style="cursor: default;" onmouseover="this.style.background='#e7e7e7'"
+                            onmouseout="this.style.background='white'"><a onclick="header_search.select_option('站外')"
+                                                                          style="width: 100%; display: block; height: 17px;">站外</a>
+                        </li>
+                        <li id="ra3" style="cursor: default;" onmouseover="this.style.background='#e7e7e7'"
+                            onmouseout="this.style.background='white'"><a onclick="header_search.select_option('证券')"
+                                                                          style="width: 100%; display: block; height: 17px;">证券</a>
+                        </li>
+                        <li id="ra4" style="cursor: default;" onmouseover="this.style.background='#e7e7e7'"
+                            onmouseout="this.style.background='white'"><a onclick="header_search.select_option('汽车')"
+                                                                          style="width: 100%; display: block; height: 17px;">汽车</a>
+                        </li>
+                        <li id="ra0" style="cursor: default;" onmouseover="this.style.background='#e7e7e7'"
+                            onmouseout="this.style.background='white'"><a onclick="header_search.select_option('视频')"
+                                                                          style="width: 100%; display: block; height: 17px;">视频</a>
+                        </li>
+                    </ul>
+                </div>
+
+	<span>
+	<input type="submit" value="搜索" class="button" style="cursor: pointer;"/>
+    </span>
+                <div class="clear"></div>
+                <style type="text/css">
+                    <!--
+                    .stockList {
+                        position: absolute;
+                        top: 45px;
+                        left: 0;
+                        width: 300px;
+                        border: 1px solid #195184;
+                        background: #fff;
+                        z-index: 999;
+                    }
+
+                    .stockList a, .stockList a:visited {
+                        color: #0A5EA6;
+                    }
+
+                    .stockList .tab td {
+                        border-bottom: 1px solid #ECECEC;
+                        height: 21px !important;
+                        *height: 20px !important;
+                        height: 20px;
+                        padding-left: 12px;
+                        text-align: left;
+                        color: #333;
+                    }
+
+                    .stockList .tab tr.current {
+                        background: #194E80;
+                    }
+
+                    .stockList .tab tr.current td {
+                        color: #fff;
+                        background: #194E80;
+                    }
+
+                    .stockList .tab tr.current td a {
+                        color: #fff;
+                    }
+
+                    .stockList .red {
+                        color: #f00;
+                    }
+
+                    -->
+                </style>
+                <div id="suggest_list" class="stockList" style="display: none;"
+                     onfocus="finance_suggest.display('inline')" onblur=""
+                     onmouseover="finance_suggest.display('inline')" onmouseout="finance_suggest.display('none')"></div>
+                <div class="clear"></div>
+            </form>
+            <script>
+                function Tourl() {
+                    var key_v = document.getElementById("loginUl").innerHTML;
+                    if (key_v == "视频") {
+                        document.forms["search_form"].action = "http://so.v.ifeng.com/video";
+                    }
+                    return true;
+                }
+            </script>
+        </div>
+        <script src="js/nav_search.js" defer></script>
+        <!-- search end -->
+    </div>
+
+    <div class="navM Lines01">
+        <div class="navList">
+            <ul id="navlistbox">
+                <li id="navA01"><a href="http://www.ifeng.com/" target="_blank">首页</a></li>
+                <li id="navA02"><a href="http://news.ifeng.com/" target="_blank">资讯</a></li>
+                <li id="navA03"><a href="http://news.ifeng.com/taiwan/" target="_blank">台湾</a></li>
+                <li id="navA04"><a href="http://opinion.ifeng.com/" target="_blank">评论</a></li>
+                <li id="navA05"><a href="http://finance.ifeng.com/" target="_blank">财经</a></li>
+                <li id="navA06"><a href="http://auto.ifeng.com/" target="_blank">汽车</a></li>
+                <li id="navA20"><a href="http://tech.ifeng.com/" target="_blank">科技</a></li>
+                <li id="navA24"><a href="http://house.ifeng.com/" target="_blank">房产</a></li>
+                <li id="navA08"><a href="http://ent.ifeng.com/" target="_blank">娱乐</a></li>
+                <li id="navA23"><a href="http://astro.ifeng.com/" target="_blank">星座</a></li>
+
+                <li id="navA17"><a href="http://fashion.ifeng.com/" target="_blank">时尚</a></li>
+                <li id="navA07"><a href="http://news.ifeng.com/sports/" target="_blank">体育</a></li>
+                <li id="navA09"><a href="http://news.ifeng.com/mil/" target="_blank">军事</a></li>
+                <li id="navA10"><a href="http://news.ifeng.com/history/" target="_blank">历史</a></li>
+                <li id="navA12"><a href="http://book.ifeng.com/" target="_blank">读书</a></li>
+                <li id="navA21"><a href="http://edu.ifeng.com/" target="_blank">教育</a></li>
+                <li id="navA14"><a href="http://health.ifeng.com/" target="_blank">健康</a></li>
+                <li id="navA19"><a href="http://baby.ifeng.com/" target="_blank">亲子</a></li>
+                <li id="navA22"><a href="http://games.ifeng.com/" target="_blank">游戏</a></li>
+                <li id="navA18"><a href="http://city.ifeng.com/" target="_blank">城市</a></li>
+                <li id="navA16"><a href="http://bbs.ifeng.com/" target="_blank">论坛</a></li>
+                <li id="navA15"><a href="http://blog.ifeng.com/" target="_blank">博报</a></li>
+                <li id="navA23" class="end"><a href="http://t.ifeng.com/" target="_blank" class="Ared3"
+                                               style="color:#ba2636">微博</a></li>
+            </ul>
+        </div>
+        <script>
+            var _currentSiteUrl = "http://news.ifeng.com/";
+            (function () {
+                var navlistbox = document.getElementById('navlistbox');
+                var navs = navlistbox.getElementsByTagName('a');
+                for (var i = 0; i < navs.length; i++) {
+                    if (navs[i].href == _currentSiteUrl) {
+                        navs[i].parentNode.id = 'navCurrent';
+                        break;
+                    }
+                }
+            })();
+        </script>
+        <div class="navFocus" style=" border-right:1px solid #e7e7e7; padding-right:5px; height:22px;">
+            <div class="navV"><a href="http://v.ifeng.com/" target="_blank">视频</a>·</div>
+            <div class="navTmp"><a href="http://v.ifeng.com/documentary/index.shtml" target="_blank">纪实</a>·</div>
+            <div class="ifengPlay"><a href="http://v.ifeng.com/live/" target="_blank">直播</a></div>
+            <div class="tvPlay"><a href="http://phtv.ifeng.com/" target="_blank">凤凰卫视</a></div>
+        </div>
+    </div>
+    <div class="navM">
+        <div class="nextNav LightBlue01" style="width:870px;">
+            <div id="navB8">
+                <a href="http://news.ifeng.com/rt-channel/rtlist_0/index.shtml" target="_blank">即时</a>
+                <a href="http://news.ifeng.com/world/" target="_blank">国际</a>
+                <a href="http://news.ifeng.com/mainland/" target="_blank">大陆</a>
+                <a href="http://news.ifeng.com/taiwan/" target="_blank">台湾</a>
+                <a href="http://news.ifeng.com/hongkong/" target="_blank">港澳</a>
+                <a href="http://news.ifeng.com/society/" target="_blank">社会</a>
+                <a href="http://news.ifeng.com/photo/being/" target="_blank">图片</a>
+                <a href="http://weather.news.ifeng.com/" target="_blank">天气</a>
+                <a href="http://news.ifeng.com/photo/video/list_0/0.shtml" target="_blank">视频</a>
+                <a href="http://news.ifeng.com/special/" target="_blank">专题</a>
+                <a href="http://news.ifeng.com/toprank/hour/" target="_blank">排行</a>
+                <a href="http://bbs.news.ifeng.com/" target="_blank">新闻论坛</a>
+                <a href="http://news.ifeng.com/yaowen/" target="_blank">每日要闻</a>
+            </div>
+        </div>
+        <div class="navProposal LightBlue01 line18" style="width:100px;">
+            <span class="LightBlue01 line18"><a href="http://www.ifeng.com/corp/feedback/"
+                                                target="_blank">提点意见</a></span>
+		<span><a href="http://news.ifeng.com/rss/" target="_blank"><img
+                src="images/cjrss.gif" border="0"/></a>
+		</span>
+        </div>
+    </div>
+    <!--100310a begin-->
+    <div class="clear"></div>
+    <!--100310a end-->
+</div>
