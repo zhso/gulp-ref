@@ -1,6 +1,6 @@
 {
   "name": "gulp-ref",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Find reference asserts, join stream pipe to next.",
   "main": "index.js",
   "directories": {

@@ -1,4 +1,5 @@
-dist
-app
+/app
+/dist
 /gulpfile.js
-node_modules
+/node_modules
+/.idea

@@ -38,7 +38,6 @@ var ref=require("gulp-ref");
 //some task here
 gulp.src("app/*.html")
     .pipe(ref())
-    .pipe(ref()) // do it again for the .logo image ref find
     .pipe(gulp.dest("dist"));
 ```
 ```
