@@ -28,6 +28,11 @@
   "homepage": "https://github.com/zhso/gulp-ref#readme",
   "dependencies": {
     "gulp-util": "^3.0.7",
-    "through2": "^2.0.1"
+    "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
